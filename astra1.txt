@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+</head>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-size: 40px;
+    margin: 100px 0;
+text-align: center;
+}
+
+.calculator{
+    margin: auto;
+    width: 250px;
+    border: 3px solid ;
+    padding: 10px;
+    text-align: center;
+}
+
+button{
+
+    background-color: white; 
+    color: black; 
+    border: 2px solid ;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+button:hover {
+    background-color:rgb(46, 45, 45);
+    color: white;
+  }
+
+
+input{
+    margin: auto;
+    border: 3px solid ;
+    padding: 10px;
+    text-align: center;
+}
+
+</style>
+<body style="color: rgba(255,255,255,.70); background-color: black; font-family: cursive;">
+  
+    <h1>Calculator</h1>
+    <div class="calculator">
+        <section>
+
+            <input type="text" name="inp" id="inp1">
+            <input type="text" name="inp" id="inp2">
+            
+        </section>
+        <div class="text-center ">
+          <button onclick="add()">+</button>
+          <button onclick="min()">-</button>
+          <button onclick="mul()">×</button>
+          <button onclick="div()">÷</button>
+      </div>
+       <h3> Result:</h3>
+        <div id="ans"></div>
+    </div>
+</body>
+<script>
+    function add() {
+    assign();
+    document.getElementById("ans").innerHTML = (a + b);
+}
+
+function assign() {
+    var n1 = document.getElementById('inp1').value;
+    var n2 = document.getElementById('inp2').value;
+    a = parseInt(n1);
+    b = parseInt(n2);
+}
+
+function min() {
+    assign();
+    document.getElementById("ans").innerHTML = (a - b);
+}
+
+function mul() {
+    assign();
+    document.getElementById("ans").innerHTML = (a * b);
+}
+function div() {
+    assign();
+    if (b != 0)
+        document.getElementById("ans").innerHTML = (a / b);
+    else document.getElementById("ans").innerHTML = "Not defined";
+}
+</script>
+</html>
