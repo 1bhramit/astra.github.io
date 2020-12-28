@@ -69,8 +69,8 @@ input{
         <div class="text-center ">
           <button onclick="add()">+</button>
           <button onclick="min()">-</button>
-          <button onclick="mul()">×</button>
-          <button onclick="div()">÷</button>
+          <button onclick="mul()">Ã—</button>
+          <button onclick="div()">Ã·</button>
       </div>
        <h3> Result:</h3>
         <div id="ans"></div>
